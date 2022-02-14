@@ -1,7 +1,7 @@
 using System.Collections.Generic;
-using Commands.Models;
+using Commands.Model;
 
-namespace Commands.Data 
+namespace Commands.Data
 {
   public interface ICommandsRepository 
   {
