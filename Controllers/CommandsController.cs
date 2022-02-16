@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using AutoMapper;
 using Commands.Data;
 using Commands.Model;
 using Microsoft.AspNetCore.Mvc;
@@ -6,32 +7,36 @@ using Microsoft.AspNetCore.Mvc;
 namespace Commands.Controllers
 {
 
-  [Route ("api/[controller]")]
+  [Route("api/[controller]")]
   [ApiController]
   public class CommandsController : ControllerBase
   {
     private readonly ICommandsRepository _repository;
+    private readonly IMapper _mapper;
 
-    public CommandsController (ICommandsRepository repository)
+    public CommandsController(ICommandsRepository repository,IMapper mapper)
     {
       _repository = repository;
-
+      _mapper = mapper;
     }
-    //private readonly MockCommandsRepository _repository = new MockCommandsRepository ();
 
     [HttpGet]
-    public ActionResult<IEnumerable<Command>> GetAllCommands ()
+    public ActionResult<IEnumerable<Command>> GetAllCommands()
     {
-      var commandItems = _repository.GetAllCommands ();
+      var commandItems = _repository.GetAllCommands();
 
-      return Ok (commandItems);
+      return Ok(commandItems);
     }
 
-    [HttpGet ("{id}")]
-    public ActionResult<Command> GetCommandById (int id)
+    [HttpGet("{id}")]
+    public ActionResult<Command> GetCommandById(int id)
     {
-      var commandItem = _repository.GetCommandById (id);
-      return Ok (commandItem);
+      var commandItem = _repository.GetCommandById(id);
+      if (commandItem != null)
+      {
+        return Ok(commandItem);
+      }
+      return NotFound();
     }
   }
 }

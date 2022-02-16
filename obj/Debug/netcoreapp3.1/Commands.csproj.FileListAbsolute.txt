@@ -60,3 +60,6 @@ H:\Projects\WebAPI\Commands\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\Micr
 H:\Projects\WebAPI\Commands\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
 H:\Projects\WebAPI\Commands\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
 H:\Projects\WebAPI\Commands\obj\Debug\netcoreapp3.1\Commands.csproj.CopyComplete
+H:\Projects\WebAPI\Commands\bin\Debug\netcoreapp3.1\AutoMapper.dll
+H:\Projects\WebAPI\Commands\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+H:\Projects\WebAPI\Commands\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll

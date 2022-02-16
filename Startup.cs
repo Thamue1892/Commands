@@ -12,6 +12,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using AutoMapper;
 
 namespace Commands
 {
@@ -28,10 +29,10 @@ namespace Commands
         public void ConfigureServices (IServiceCollection services)
         {
             services.AddControllers ();
-            //services.AddScoped<ICommandsRepository, MockCommandsRepository> ();
+            services.AddAutoMapper (AppDomain.CurrentDomain.GetAssemblies ());
             services.AddScoped<ICommandsRepository, SqlCommandsRepository> ();
-            services.AddDbContext<CommandsContext>(opt => opt
-                    .UseSqlServer(Configuration.GetConnectionString("CommandsConnection")));
+            services.AddDbContext<CommandsContext> (opt => opt
+                .UseSqlServer (Configuration.GetConnectionString ("CommandsConnection")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
