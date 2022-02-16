@@ -28,7 +28,8 @@ namespace Commands
         public void ConfigureServices (IServiceCollection services)
         {
             services.AddControllers ();
-            services.AddScoped<ICommandsRepository, MockCommandsRepository> ();
+            //services.AddScoped<ICommandsRepository, MockCommandsRepository> ();
+            services.AddScoped<ICommandsRepository, SqlCommandsRepository> ();
             services.AddDbContext<CommandsContext>(opt => opt
                     .UseSqlServer(Configuration.GetConnectionString("CommandsConnection")));
         }
