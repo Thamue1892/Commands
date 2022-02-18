@@ -63,3 +63,6 @@ H:\Projects\WebAPI\Commands\obj\Debug\netcoreapp3.1\Commands.csproj.CopyComplete
 H:\Projects\WebAPI\Commands\bin\Debug\netcoreapp3.1\AutoMapper.dll
 H:\Projects\WebAPI\Commands\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
 H:\Projects\WebAPI\Commands\bin\Debug\netcoreapp3.1\System.Runtime.CompilerServices.Unsafe.dll
+H:\Projects\WebAPI\Commands\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+H:\Projects\WebAPI\Commands\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+H:\Projects\WebAPI\Commands\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
